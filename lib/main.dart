@@ -1,4 +1,5 @@
 import 'package:desktopapp/src/home/home.dart';
+import 'package:desktopapp/src/home/page2.dart';
 import 'package:flutter/material.dart';
 import 'plugins/desktop/desktop.dart';
 import 'config_singleton.dart';
@@ -36,7 +37,12 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo IndexDB'),
+      routes: {
+        '/page1': (context) => const MyHomePage(title: 'Flutter Demo IndexDB'),
+        '/page2': (context) => const MyHomePage2(title: 'Flutter Demo IndexDB'),
+      },
+      initialRoute: '/',
+      // home: const MyHomePage(title: 'Flutter Demo IndexDB'),
     );
   }
 }

@@ -1,12 +1,11 @@
 import 'package:desktopapp/config_singleton.dart';
 import 'package:desktopapp/database/database.dart';
 import 'package:desktopapp/database/table/customer/customer.dart';
-import 'package:desktopapp/src/home/page2.dart';
 import 'package:flutter/material.dart';
 import 'package:moor/moor.dart' as moor;
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class MyHomePage2 extends StatefulWidget {
+  const MyHomePage2({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -20,10 +19,10 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage2> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage2> {
   List<Customer> listCustomer = [];
 
   Future<void> _getData() async {
@@ -259,22 +258,10 @@ class _MyHomePageState extends State<MyHomePage> {
           buildContent(),
         ],
       ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          FloatingActionButton(
-            onPressed: showDialogAddCustomer,
-            tooltip: 'Add',
-            child: const Icon(Icons.add),
-          ),
-          FloatingActionButton(
-            onPressed: () {
-              Navigator.of(context).pushNamed("/page2");
-            },
-            tooltip: 'New page',
-            child: const Icon(Icons.pages),
-          )
-        ],
+      floatingActionButton: FloatingActionButton(
+        onPressed: showDialogAddCustomer,
+        tooltip: 'Add',
+        child: const Icon(Icons.add),
       ),
     );
   }
