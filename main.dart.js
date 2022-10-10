@@ -35623,7 +35623,7 @@ A.Dz.prototype={}
 A.oY.prototype={}
 A.F4.prototype={
 M(a){var s=A.air(null,B.ht,null)
-return new A.vm(A.aD(["/page1",new A.XV(),"/page2",new A.XW()],t.N,t.Ab),"/","Flutter Demo",s,!1,null)}}
+return new A.vm(A.aD(["/",new A.XV(),"/page2",new A.XW()],t.N,t.Ab),"/","Flutter Demo",s,!1,null)}}
 A.XV.prototype={
 $1(a){return B.FN},
 $S:214}
