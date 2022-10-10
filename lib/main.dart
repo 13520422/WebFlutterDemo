@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: {
-        '/page1': (context) => const MyHomePage(title: 'Flutter Demo IndexDB'),
+        '/': (context) => const MyHomePage(title: 'Flutter Demo IndexDB'),
         '/page2': (context) => const MyHomePage2(title: 'Flutter Demo IndexDB'),
       },
       initialRoute: '/',
